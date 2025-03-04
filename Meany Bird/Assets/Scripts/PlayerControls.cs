@@ -31,9 +31,20 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+           // GameObject.Find("GameController").GetComponent<GameController>().GameOver();
             rb.velocity = Vector2.up * velocity;
+
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if(collision.gameObject.tag == "HighSpike" || collision.gameObject.tag == "LowSpike" || collision.gameObject.tag == "Ground") 
+        {
+            //Game is at a stopping state
+            //Time.timeScale = 0;
+            GameObject.Find("GameController").GetComponent<GameController>().GameOver();
         }
     }
 }
-
 
