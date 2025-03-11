@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectibles : MonoBehaviour
+public class Destroyer : MonoBehaviour
 {
     // Start is called before the first frame update
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Start()
     {
-        Score.score++;
+        
     }
 
     // Update is called once per frame
-    
+    void Update()
+    {
+        
+    }
 }
