@@ -15,7 +15,7 @@ public class PlayerControls : MonoBehaviour
     [Tooltip("Movement speed of the object")]
     public float movementSpeed = 10f;
     [Tooltip("Movement direction of the object")]
-    public float movement = Of;
+    public float movement = 0f;
     private SpriteRenderer spriteRenderer;
 
     void Start()
